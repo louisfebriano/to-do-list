@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link jQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>To Do List App</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="search">
+            <input type="text" class="searchTerm" id="searchInput" placeholder="Search activity...." onkeyup="searchTasks(event)">
+            <button type="submit" class="searchButton" onclick="searchTasks(event)">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <div class="title">
+            <div class="filter">
+                <button class="filter-button" onclick="filterTasks('done')">Done</button>
+                <button class="filter-button" onclick="filterTasks('pending')">Pending</button>
+                <button class="filter-button" onclick="filterTasks('all')">All</button>
+            </div>
+            <h2>My todos:</h2>
+        </div>
+
+        <!-- ul yang bersifat dinamis (sesuai dengan task yg ada) -->
+        <ul id="taskList"> </ul>
+
+        <div class="task-input">
+            <input type="text" id="newTask" placeholder="Add new task..." onkeyup="triggerAddTask(event)">
+            <button class="addTaskButton" onclick="addTask()">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

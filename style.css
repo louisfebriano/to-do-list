@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding-right: 10vh;
+  padding-left: 10vh;
+  height: 100vh;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 10px;
+  height: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 50px;
+  height: 46px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container {
+    margin-top: 40px;
+    position: relative;
+    left: 30%;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+ul#taskList {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+li.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.task-text {
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-input {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#newTask {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #00B4CC;
+  border-radius: 25px;
+  outline: none;
+}
+
+.addTaskButton {
+  padding: 10px;
+  background-color: #00B4CC;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.filter-button {
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00B4CC;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.delete-task {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+}
+
+li.task-item:hover .delete-task {
+  display: block;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .filter-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .search {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .searchButton {
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchTerm {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .searchButton {
+        font-size: 14px;
+        height: 38px;
+        width: 38px;
+    }
+
+    .filter-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
